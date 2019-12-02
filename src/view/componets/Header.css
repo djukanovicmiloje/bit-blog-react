@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+#root {
+  width: 900px;
+  margin: 100px auto;
+}
+header h1 {
+  font-size: 50px;
+}
+header a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  line-height: 50px;
+  color: black;
+  font-weight: bold;
+}
