@@ -1,10 +1,11 @@
 import React from "react";
+import "./CreatePost.css";
 import createPost from "../../services/createPost";
-import authors from "../../data/authors";
+
 class CreatePost extends React.Component {
   render() {
     return (
-      <>
+      <div id="createNew">
         <h2>New Post</h2>
         <h4>Title</h4>
         <input
@@ -15,9 +16,11 @@ class CreatePost extends React.Component {
         <textarea
           onChange={event => this.handleContentChange(event)}
         ></textarea>
-        <button onClick={() => this.onSaveClick()}>Cancel</button>
-        <button>Save</button>
-      </>
+        <div id="btns">
+          <button>Cancel</button>
+          <button onClick={() => this.onSaveClick()}>Save</button>
+        </div>
+      </div>
     );
   }
   handleTitleChange(event) {
@@ -31,7 +34,7 @@ class CreatePost extends React.Component {
       title: this.state.title,
       body: this.state.content
     };
-    createPost(postData, authors[0]);
+    createPost(postData);
   }
 }
 export default CreatePost;

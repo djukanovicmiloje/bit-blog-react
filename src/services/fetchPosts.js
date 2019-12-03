@@ -1,17 +1,23 @@
-import fetchAuthors from "./fetchAuthors";
-import createPost from "./createPost";
-import authors from "../data/authors";
+import Post from "../entities/post";
 
-async function fetchPosts() {
+export default async function fetchPosts() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await response.json();
 
-  await fetchAuthors();
+  const postsData = JSON.parse(localStorage.getItem("posts"));
 
-  posts.forEach((post, i) => {
-    if (i < 20) {
-      createPost(post, authors[i % 10]);
-    }
-  });
+  let postsFromLocalStorage;
+  if (postsData) {
+    postsFromLocalStorage = postsData.map(
+      post => new Post(1, post.title, post.body, 1)
+    );
+  } else {
+    postsFromLocalStorage = [];
+  }
+
+  const postsFromAPI = posts.map(
+    post => new Post(post.id, post.title, post.body, post.userId)
+  );
+
+  return postsFromLocalStorage.concat(postsFromAPI);
 }
-export default fetchPosts;

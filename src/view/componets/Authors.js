@@ -1,24 +1,38 @@
 import React from "react";
-import authors from "../../data/authors";
 import { Link } from "react-router-dom";
+import fetchAuthors from "../../services/fetchAuthors";
 
 class Authors extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
+    this.state = {
+      loading: true
+    };
   }
   render() {
-    return (
-      <>
-        <h2>Authors</h2>
-        {authors.map((author, key) => (
-          <Link to={`/author/${author.id}`}>
+    if (this.state.loading) {
+      return <div>Page is loading</div>;
+    } else {
+      return (
+        <>
+          <h1 id="authors">Authors</h1>
+          {this.state.authors.map((author, key) => (
             <p key={key}>
-              {author.name} ({author.numberOfPosts} - posts)
+              <Link className="author" to={`/author/${author.id}`}>
+                {author.name}
+              </Link>
             </p>
-          </Link>
-        ))}
-      </>
-    );
+          ))}
+        </>
+      );
+    }
+  }
+  async getAuthors() {
+    const authors = await fetchAuthors();
+    this.setState({ loading: false, authors });
+  }
+  componentDidMount() {
+    this.getAuthors();
   }
 }
 

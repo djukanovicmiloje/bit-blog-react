@@ -1,0 +1,33 @@
+#createNew h2 {
+  text-align: center;
+  font-size: 40px;
+  margin: 0.5em;
+}
+#createNew h4 {
+  font-size: 30px;
+}
+#createNew input {
+  border: none;
+  border-bottom: 2px solid black;
+  margin: 1em 0;
+}
+#createNew textarea {
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
+}
+#createNew button {
+  background: none;
+  border: 2px solid black;
+  padding: 1em;
+  font-weight: bold;
+  margin: 2em;
+}
+#createNew {
+  width: 400px;
+  margin: auto;
+}
+#btns {
+  display: flex;
+  justify-content: space-between;
+}

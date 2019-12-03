@@ -1,0 +1,12 @@
+.authorCard {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding: 20px;
+}
+.authorCard * {
+  flex-basis: 40%;
+}
+.authorCard p {
+  font-size: 25px;
+}

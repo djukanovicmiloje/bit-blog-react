@@ -1,9 +1,9 @@
 class Post {
-  constructor(id, title, content, author) {
+  constructor(id, title, content, userId) {
     this.id = id;
     this.title = title;
     this.content = content;
-    this.author = author;
+    this.userId = userId;
   }
 }
 export default Post;

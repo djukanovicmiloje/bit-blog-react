@@ -1,0 +1,12 @@
+.backLink a {
+  text-decoration: none;
+  color: black;
+}
+.backLink {
+  border: 2px solid black;
+  padding: 0.5em;
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+  margin: 1em;
+}

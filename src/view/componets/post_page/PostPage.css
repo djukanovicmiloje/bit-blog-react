@@ -1,0 +1,32 @@
+#postPage h2 {
+  text-align: center;
+  width: 60%;
+  margin: 20px auto;
+}
+#postPage > p {
+  margin-bottom: 50px;
+}
+#sameAuthor {
+  list-style: none;
+}
+#sameAuthor p {
+  font-weight: bold;
+}
+#authorLink {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1em;
+}
+.author {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5em;
+}
+#authors {
+  text-align: center;
+  margin: 1em 0;
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
-import Header from "./componets/Header";
-import Home from "./componets/Home";
+import Header from "./componets/header/Header";
+import Home from "./componets/home/Home";
 import Authors from "./componets/Authors";
 import About from "./componets/About";
 import CreatePost from "./componets/CreatePost";
-import PostPage from "./componets/PostPage";
-import AuthorPage from "./componets/AuthorPage";
+import PostPage from "./componets/post_page/PostPage";
+import AuthorPage from "./componets/author_page/AuthorPage";
 
 function App() {
   return (

@@ -7,12 +7,6 @@ class Author {
     this.address = address;
     this.phone = phone;
     this.company = company;
-    this.postList = [];
-    this.numberOfPosts = 0;
-  }
-  addPost(postId) {
-    this.postList.push(postId);
-    this.numberOfPosts++;
   }
 }
 export default Author;
