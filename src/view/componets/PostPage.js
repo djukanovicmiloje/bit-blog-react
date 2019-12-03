@@ -10,6 +10,7 @@ const PostPage = props => {
 
   return (
     <div id="postPage">
+      <Link to="/home">{"< Back"}</Link>
       <h2>{post.title}</h2>
       <Link to={`/author/${post.author.id}`}>{post.author.name}</Link>
       <p>{post.content}</p>

@@ -2,3 +2,14 @@
   border-bottom: 2px solid black;
   margin-bottom: 20px;
 }
+.postCard h3 {
+  font-size: 30px;
+  color: black;
+  padding: 10px 0;
+}
+.postCard p {
+  padding-bottom: 10px;
+}
+.postCard a {
+  text-decoration: none;
+}

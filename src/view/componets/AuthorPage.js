@@ -1,5 +1,6 @@
 import React from "react";
 import getAuthor from "../../services/getAuthor";
+import { Link } from "react-router-dom";
 
 const AuthorPage = props => {
   const authorID = props.match.params.id;
@@ -8,6 +9,7 @@ const AuthorPage = props => {
   const LONGTITUDE = author.address.geo.lng;
   return (
     <div>
+      <Link to="/home">{"< Back"}</Link>
       <h2>{author.name}</h2>
       <p>username: {author.username}</p>
       <p>email: {author.email}</p>
